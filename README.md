@@ -1,4 +1,5 @@
-# Znakomstva-project
+# Love partner project
 Made by:
 Vova Mshkovich,
-Vova Simuta
+Vova Simuta,
+Artem Benyash
