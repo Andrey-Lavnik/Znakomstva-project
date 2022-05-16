@@ -1,4 +1,8 @@
 
+
+//не получается сделать нормальное оповещение о не заполненом поле и не плучается отпровлять данные на localstorage из-за смены языка
+
+
 const mail_text = document.querySelector('.mail_text')
 const mail_text_usa = document.querySelector('.mail_text_usa')
 const mail_button_text = document.querySelector('.mail_button')
