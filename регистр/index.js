@@ -1,182 +1,50 @@
 
 
-//не получается сделать нормальное оповещение о не заполненом поле и не плучается отпровлять данные на localstorage из-за смены языка
+
+let mail_text = document.querySelector('.mail_text')
+let mail_text_usa = document.querySelector('.mail_text_usa')
+let mail_button_text = document.querySelector('.mail_button')
+let mail_button_text_usa = document.querySelector('.mail_button_usa')
+
+let hRUS = document.querySelector('.hrus')
+let hUSA = document.querySelector('.husa')
+
+let day = document.querySelector('.day')
+let day_usa = document.querySelector('.day_usa')
+
+let intrname = document.querySelector('.intrname') 
+let intrname_usa = document.querySelector('.intrname_usa')
+
+let word = document.querySelector('.word')
+let word_usa= document.querySelector('.word_usa')
+
+let head_text_rus = document.querySelector('.header_text')
+let head_text_usa = document.querySelector('.header_text_usa')
+
+let dat_text = document.querySelector('.dat_text')
+let dat_text_usa = document.querySelector('.dat_text_usa')
+
+let ruslengimg = document.querySelector('.header_imgrus')
+let usalengimg = document.querySelector('.header_imgusa')
+let rusleng = document.querySelector('.header_rus')
+let usaleng = document.querySelector('.header_usa')
+
+let yer = document.querySelector('.yer')
+let yer_usa = document.querySelector('.yer_usa')
+
+let month = document.querySelector('.month')
+let month_usa = document.querySelector('.month_usa')
+
+let emailbtn = document.querySelector('.emailbtn')
+let emailbtn_usa = document.querySelector('.emailbtn_usa')
+
+let passwordbtn = document.querySelector('.passwordbtn')
+let passwordbtn_usa = document.querySelector('.passwordbtn_usa')
+
+let acbtn = document.querySelector('.acbtn')
+let acbtn_usa = document.querySelector('.acbtn_usa')
 
 
-const mail_text = document.querySelector('.mail_text')
-const mail_text_usa = document.querySelector('.mail_text_usa')
-const mail_button_text = document.querySelector('.mail_button')
-const mail_button_text_usa = document.querySelector('.mail_button_usa')
-
-const hRUS = document.querySelector('.hrus')
-const hUSA = document.querySelector('.husa')
-
-const day = document.querySelector('.day')
-const day_usa = document.querySelector('.day_usa')
-
-const intrname = document.querySelector('.intrname')
-const intrname_usa = document.querySelector('.intrname_usa')
-
-const word = document.querySelector('.word')
-const word_usa= document.querySelector('.word_usa')
-
-const head_text_rus = document.querySelector('.header_text')
-const head_text_usa = document.querySelector('.header_text_usa')
-
-const dat_text = document.querySelector('.dat_text')
-const dat_text_usa = document.querySelector('.dat_text_usa')
-
-const ruslengimg = document.querySelector('.header_imgrus')
-const usalengimg = document.querySelector('.header_imgusa')
-const rusleng = document.querySelector('.header_rus')
-const usaleng = document.querySelector('.header_usa')
-
-
-
-
-
-
-
-
-
-
-usalengimg.addEventListener('click',()=>{
-    ruslengimg.classList.remove('none')
-    rusleng.classList.remove('none')
-    usaleng.classList.add('none')
-    usalengimg.classList.add('none')
-
-    head_text_rus.classList.remove('none')
-    head_text_usa.classList.add('none')
-
-    mail_text.classList.remove('none')
-    mail_button_text.classList.remove('none')
-    mail_text_usa.classList.add('none')
-    mail_button_text_usa.classList.add('none')
-
-    hRUS.classList.remove('none')
-    hUSA.classList.add('none')
-
-    intrname.classList.remove('none')
-    intrname_usa.classList.add('none')
-
-    word.classList.remove('none')
-    word_usa.classList.add('none')
-
-    dat_text.classList.remove('none')
-    dat_text_usa.classList.add('none')
-    day.classList.remove('none')
-    day_usa.classList.add('none')
-
-    localStorage.clear
-
-    function NameNom(){
-        const intrname = document.querySelector('.intrname').value
-        console.log(intrname)
-        const namevalue = localStorage.setItem('name', intrname)
-        return{
-            namevalue
-        }
-    }  
-    
-    function DayLengs(){
-        const daybtn = document.querySelector('.day').value
-        if(daybtn >= 1 && daybtn <= 31){
-            console.log(daybtn);
-            const dayvalue = localStorage.setItem('day',daybtn)
-            return{
-                dayvalue
-            }
-        }else{
-            alert('в дне введите число от 1 до 31')  
-            localStorage.removeItem('day')                        
-        }
-        
-        
-    }
-    
-    function MonthLengs(){
-        const monthbtn = document.querySelector('.month').value
-        if (monthbtn >= 1 && monthbtn <= 12){
-            console.log(monthbtn)
-            const monthvalue = localStorage.setItem('month',monthbtn)
-            return{
-                monthvalue
-            }
-        }
-        else{
-            alert('в месяце введите число от 1 до 12') 
-            localStorage.removeItem('month')
-        }
-        
-    }
-    
-    function YerLengs(){
-        const yerbtn = document.querySelector('.yer').value
-        if (yerbtn >= 1922 && yerbtn <= 2022){  
-            console.log(yerbtn);
-            const yervalue = localStorage.setItem('yer',yerbtn)
-            return{
-                yervalue
-            }
-        }
-        else{
-            alert('в году введите число от 1922 до 2022')
-            localStorage.removeItem('yer') 
-            
-        }
-        
-        
-    }
-    // yerbtn.addEventListener('click',()=>{
-    //     yerbtn.classList.add('none')
-    //     mas4.push(prompt('введите год'))
-        
-        
-    // })
-    
-    
-    function PasswordLengs(){
-        const passbtn = document.querySelector('.passwordbtn').value
-        if(passbtn.value == null){
-            alert('введите парроль')
-        }
-        else{
-            console.log(passbtn)
-            const passvalue = localStorage.setItem('password', passbtn)
-            return{
-                passvalue
-            }
-        }
-        
-    }
-    
-    function EmailLengs(){
-        const emailbtn = document.querySelector('.emailbtn').value
-        if(emailbtn.value == null){
-            alert('введите адрес электронной почты');
-        }
-        else{
-            console.log(emailbtn);
-            const emailvalue = localStorage.setItem('email', emailbtn)
-            return{
-                emailvalue
-            }
-        }
-    }
-    
-    const ac = document.querySelector('.acbtn')
-    ac.addEventListener('click',()=>{
-        PasswordLengs() 
-        YerLengs() 
-        MonthLengs() 
-        DayLengs() 
-        NameNom() 
-        EmailLengs() 
-        
-        
-    }) 
-})
 
 ruslengimg.addEventListener('click',()=>{
     usalengimg.classList.remove('none')
@@ -207,117 +75,242 @@ ruslengimg.addEventListener('click',()=>{
     day.classList.add('none')
     day_usa.classList.remove('none')
 
-    localStorage.clear
+    month.classList.add('none')
+    month_usa.classList.remove('none')
 
-    function NameNom(){
-        const intrname = document.querySelector('.intrname').value
-        console.log(intrname)
-        const namevalue = localStorage.setItem('name', intrname)
-        return{
-            namevalue
-        }
-    }  
+    yer.classList.add('none')
+    yer_usa.classList.remove('none')
+
+    emailbtn.classList.add('none')
+    emailbtn_usa.classList.remove('none')
+
+    passwordbtn.classList.add('none')
+    passwordbtn_usa.classList.remove('none')
+
+    acbtn.classList.add('none')
+    acbtn_usa.classList.remove('none')
+
     
-    function DayLengs(){
-        const daybtn = document.querySelector('.day').value
-        if(daybtn >= 1 && daybtn <= 31){
-            console.log(daybtn);
-            const dayvalue = localStorage.setItem('day',daybtn)
-            return{
-                dayvalue
-            }
-        }else{
-            alert('in the day, enter a number from 1 to 31')  
-            localStorage.removeItem('day')                        
-        }
+    acbtn_usa.addEventListener('click', ()=>{
+            let intrnamebtn_usa = document.querySelector('.intrname_usa').value
+            console.log(intrnamebtn_usa)
+            localStorage.setItem('name', intrnamebtn_usa)
         
         
-    }
-    
-    function MonthLengs(){
-        const monthbtn = document.querySelector('.month').value
-        if (monthbtn >= 1 && monthbtn <= 12){
-            console.log(monthbtn)
-            const monthvalue = localStorage.setItem('month',monthbtn)
-            return{
-                monthvalue
-            }
-        }
-        else{
-            alert('in the month, enter a number from 1 to 12') 
-            localStorage.removeItem('month')
-        }
         
-    }
-    
-    function YerLengs(){
-        const yerbtn = document.querySelector('.yer').value
-        if (yerbtn >= 1922 && yerbtn <= 2022){  
-            console.log(yerbtn);
-            const yervalue = localStorage.setItem('yer',yerbtn)
-            return{
-                yervalue
+            let daybtn_usa = document.querySelector('.day_usa').value
+            if(daybtn_usa >= 1 && daybtn_usa <= 31){
+                console.log(daybtn_usa);
+                localStorage.setItem('day',daybtn_usa)
+            }else{
+                alert('in the day, enter a number from 1 to 31')  
+                                       
             }
-        }
-        else{
-            alert('in the year, enter a number between 1922 and 2022')
-            localStorage.removeItem('yer') 
             
-        }
-        
-        
-    }
-    // yerbtn.addEventListener('click',()=>{
-    //     yerbtn.classList.add('none')
-    //     mas4.push(prompt('введите год'))
-        
-        
-    // })
-    
-    
-    function PasswordLengs(){
-        const passbtn = document.querySelector('.passwordbtn').value
-        if(passbtn == null){
-            alert('enter password')
-        }
-        else{
-            console.log(passbtn)
-            const passvalue = localStorage.setItem('password', passbtn)
-            return{
-                passvalue
-            }
-        }
-        
-    }
-    
-    function EmailLengs(){
-        const emailbtn = document.querySelector('.emailbtn').value
-        if(emailbtn == null){
-            alert('enter your email address');
-        }
-        else{
-            console.log(emailbtn);
-            const emailvalue = localStorage.setItem('email', emailbtn)
-            return{
-                emailvalue
-            }
-        }
-    }
-    
-    const ac = document.querySelector('.acbtn')
-    ac.addEventListener('click',()=>{
-        PasswordLengs()
-        YerLengs()
-        MonthLengs() 
-        DayLengs()
-        NameNom() 
-        EmailLengs() 
             
         
         
         
-    }) 
+            let monthbtn_usa = document.querySelector('.month_usa').value
+            if (monthbtn_usa >= 1 && monthbtn_usa <= 12){
+                console.log(monthbtn_usa)
+                localStorage.setItem('month',monthbtn_usa)
+            }
+            else{
+                alert('in the month, enter a number from 1 to 12') 
+                
+            }
+            
+        
+        
+        
+            let yerbtn_usa = document.querySelector('.yer_usa').value
+            if (yerbtn_usa >= 1922 && yerbtn_usa <= 2022){  
+                console.log(yerbtn_usa);
+                localStorage.setItem('yer',yerbtn_usa)
+            }
+            else{
+                alert('in the year, enter a number between 1922 and 2022')
+                 
+                
+            }
+            
+            
+        
+        // yerbtn.addEventListener('click',()=>{
+        //     yerbtn.classList.add('none')
+        //     mas4.push(prompt('введите год'))
+            
+            
+        // })
+        
+        
+        
+            let passbtn_usa = document.querySelector('.passwordbtn_usa').value
+            if(passbtn_usa == undefined){
+                alert('enter password')
+            }
+            else{
+                console.log(passbtn_usa)
+                localStorage.setItem('password', passbtn_usa)
+            }
+            
+        
+        
+        
+            let emailbtn_usa = document.querySelector('.emailbtn_usa').value
+            if(emailbtn_usa == undefined){
+                alert('enter your email address');
+            }
+            else{
+                console.log(emailbtn_usa);
+                localStorage.setItem('email', emailbtn_usa)
+            }
+        
+    })
+    
+    
+    
+    
+    
 })
+
+usalengimg.addEventListener('click',()=>{
+    
+    ruslengimg.classList.remove('none')
+    rusleng.classList.remove('none')
+    usaleng.classList.add('none')
+    usalengimg.classList.add('none')
+
+    head_text_rus.classList.remove('none')
+    head_text_usa.classList.add('none')
+
+    mail_text.classList.remove('none')
+    mail_button_text.classList.remove('none')
+    mail_text_usa.classList.add('none')
+    mail_button_text_usa.classList.add('none')
+
+    hRUS.classList.remove('none')
+    hUSA.classList.add('none')
+
+    intrname.classList.remove('none')
+    intrname_usa.classList.add('none')
+
+    word.classList.remove('none')
+    word_usa.classList.add('none')
+
+    dat_text.classList.remove('none')
+    dat_text_usa.classList.add('none')
+    day.classList.remove('none')
+    day_usa.classList.add('none')
+
+    month.classList.remove('none')
+    month_usa.classList.add('none')
+
+    yer.classList.remove('none')
+    yer_usa.classList.add('none')
+
+    emailbtn.classList.remove('none')
+    emailbtn_usa.classList.add('none')
+
+    passwordbtn.classList.remove('none')
+    passwordbtn_usa.classList.add('none')
+
+    acbtn.classList.remove('none')
+    acbtn_usa.classList.add('none')
+
+    
+    acbtn.addEventListener('click',()=>{
+            let intrnamebtn = document.querySelector('.intrname').value
+            console.log(intrnamebtn)
+            localStorage.setItem('name', intrnamebtn)
+        
+        
+        
+            let daybtn = document.querySelector('.day').value
+            if(daybtn >= 1 && daybtn <= 31){
+                console.log(daybtn);
+                localStorage.setItem('day',daybtn)
+            }else{
+                alert('в дне введите число от 1 до 31')  
+                                       
+            }
+            
+            
+        
+        
+        
+            let monthbtn = document.querySelector('.month').value
+            if (monthbtn >= 1 && monthbtn <= 12){
+                console.log(monthbtn)
+                localStorage.setItem('month',monthbtn)
+            }
+            else{
+                alert('в месяце введите число от 1 до 12') 
+                
+            }
+            
+        
+        
+        
+            let yerbtn = document.querySelector('.yer').value
+            if (yerbtn >= 1922 && yerbtn <= 2022){  
+                console.log(yerbtn);
+                localStorage.setItem('yer',yerbtn)
+            }
+            else{
+                alert('в году введите число от 1922 до 2022')
+                
+                
+            }
+            
+            
+        
+        // yerbtn.addEventListener('click',()=>{
+        //     yerbtn.classList.add('none')
+        //     mas4.push(prompt('введите год'))
+            
+            
+        // })
+        
+        
+        
+            let passbtn = document.querySelector('.passwordbtn').value
+            if(passbtn == undefined){
+                alert('введите парроль')
+            }
+            else{
+                console.log(passbtn)
+                localStorage.setItem('password', passbtn)
+                
+            }
+            
+        
+        
+        
+            let emailbtn = document.querySelector('.emailbtn').value
+            if(emailbtn == undefined){
+                alert('введите адрес электронной почты');
+            }
+            else{
+                console.log(emailbtn);
+                localStorage.setItem('email', emailbtn)
+            }
+        
+        
+        
+    
+    }) 
+    
+    
+})
+    
+
+
+
+
+
+
 
 
 
