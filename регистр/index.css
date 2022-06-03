@@ -1,0 +1,272 @@
+p{
+    font-family: Rubik;
+}
+input{
+    text-decoration: none;
+    background-color: unset;
+    border: unset;
+    color:grey;
+}
+.header_text_usa{
+    padding: 0 10px 0 0;
+}
+.buttons input{
+    text-decoration: none;
+    background-color: unset;
+    border: unset;
+    color:grey;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+.header{
+    background-color: #1B0522;
+    padding: 0.09px;
+    
+}
+.header_leng img{
+    
+}
+.header_imgusa {
+    padding: 7px 5px 0 0;
+    max-height: 30px;
+    max-width: 30px;
+}
+.header_imgrus{
+    padding: 13px 5px 0 0;
+    max-height: 20px;
+    max-width: 27px;
+}
+.header_leng{
+    display: flex;
+}
+.header_text{
+    padding: 0 10px 0 0;
+}
+.header_menu{
+    color: white;
+    /* flex-direction: column; */
+    display: flex;
+    justify-content: center;
+}
+body{
+    font-family: Rubik;
+}
+.container{
+    background-color: #303;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 2000px;
+    max-height: 5000px;
+    background-image: url(png/Ellipse\ 10.png);
+    background-repeat: no-repeat; 
+}
+.mail_text{
+    
+    padding: 0 10px;
+}
+.mail_text_usa{
+    
+    padding: 0 10px;
+}
+.logandmail{
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    
+}
+.mail{
+    padding: 0 200px 0 0;
+    display: flex;
+    color: white;
+    font-family: Rubik;
+}
+.mail_button a{
+    size: 80%;
+}
+.mail_button{
+    text-align: center;
+    /* background-color: red; */  
+    border: solid #EE0979; 
+    border-radius: 500px;
+    padding: 15px 13px 0 13px;
+}
+.mail_button_usa{
+    text-align: center;
+    /* background-color: red; */  
+    border: solid #EE0979; 
+    border-radius: 500px;
+    padding: 15px 15px 0 15px;
+}
+.log{
+    padding: 0 0 0 200px;
+}
+
+.instrbuttons{
+    
+}
+.password p{
+    color: grey;
+    font-size: 72%;
+}
+.email p{
+    color: grey;
+    font-size: 72%;
+}
+.dat p{
+    color: grey;
+    font-size: 72%;
+}
+.name p{
+    color: grey;
+    font-size: 72%;
+}
+h2{
+    color: white;
+}
+.passwordimg{
+    height:20px;
+    width:20px;
+    padding: 0 0 3px 0;
+}
+.password{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    display:flex;
+}
+.emailimg{
+    width: 17px;
+    height: 16px;
+    padding: 0 2px 0 0;
+}
+.emailbtn{
+    width: 280px;
+}
+.email{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 15px 0 15px 7px;
+    /* margin: 10px 0; */
+    display: flex;
+}
+.instr{
+    width: 280px;
+    height: 390px;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.day_button{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 3px 0 6px 0;
+}
+/* .day_button_usa{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 3px 0 6px 0;
+} */
+.month_button{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 3px 0 6px 0;
+}
+/* .month_button_usa{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 3px 0 6px 0;
+} */
+.yer_button{
+    background: #42204E;
+    border-radius: 500px;
+    padding: 3px 0 6px 0;
+}
+.name_button {
+    background: #42204E;
+    border-radius: 500px;
+    padding: 13px 10px 15px 10px;
+    display: flex;
+    
+}
+.nameimg{
+    max-width: 20px;
+    max-height: 25px;
+}
+.intrname{
+    width: 280px;
+}
+.intrname_usa{
+    width: 280px;
+}
+.nam{
+    padding: 0  0 0 5px; 
+}
+.pol{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.create_ac{
+    color:white;
+    text-align: center;
+    /* background-color: red; */
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    box-shadow: 0px 20px 30px rgba(179, 34, 31, 0.1);
+    border-radius: 500px;
+    padding: 14px;
+    margin: 10px 0;
+}
+.buttons{
+    padding: 10px 0 0 0;
+}
+.boy_on{
+    background: linear-gradient(90deg,  #0575E6 0%, #021B79 100%);
+    box-shadow: 0px 20px 30px rgba(179, 34, 31, 0.1);
+    border-radius: 500px;
+    padding: 10px 50px;
+}
+.boy_off{
+    border-radius: 500px;
+    border: solid #0575E6;
+    padding: 10px 50px;
+    
+}
+.gierl_on{
+    background: linear-gradient(90deg, #EE0979 0%, #FF6A00 100%);
+    box-shadow: 0px 20px 30px rgba(179, 34, 31, 0.1);
+    border-radius: 500px;
+    padding: 10px 50px;
+    
+}
+.gierl_off{
+    border-radius: 500px;
+    border: solid #EE0979;
+    padding: 10px 50px;
+}
+
+/* .buto{
+    padding: 10px 0;
+    
+} */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1B0522;
+    padding: 10px 0;
+    margin: 180px 0 0 0;
+}
+.about a{
+    padding: 0 10px;
+}
+.none{
+    display: none;
+}
